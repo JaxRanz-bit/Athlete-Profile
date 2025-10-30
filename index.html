@@ -20,9 +20,10 @@
 
     .container {
       display: flex;
+      flex-wrap: wrap;
+      width: 95%;
       max-width: 1200px;
-      width: 100%;
-      margin: 30px;
+      margin: 20px;
       background-color: #D2B48C;
       border-radius: 20px;
       overflow: hidden;
@@ -31,16 +32,19 @@
 
     /* Left Sidebar */
     .sidebar {
-      width: 30%;
+      flex: 1;
+      min-width: 280px;
       background-color: #9D825D;
       padding: 30px 20px;
       text-align: center;
       border-right: 2px solid #000000;
+      box-sizing: border-box;
     }
 
     .profile-pic {
-      width: 150px;
-      height: 150px;
+      width: 40vw;
+      max-width: 150px;
+      aspect-ratio: 1 / 1;
       border-radius: 50%;
       overflow: hidden;
       margin: 0 auto 20px;
@@ -53,18 +57,18 @@
     }
 
     .sidebar h2 {
-      font-size: 22px;
+      font-size: 1.3rem;
       color: #000000;
       margin-bottom: 5px;
     }
 
     .sidebar h3 {
-      font-size: 14px;
+      font-size: 0.9rem;
       color: #000000;
       margin-bottom: 20px;
     }
 
-    .contacts {
+    .contacts, .aboutMe {
       background: #ffffff;
       border-radius: 10px;
       padding: 15px;
@@ -72,21 +76,10 @@
       margin-bottom: 15px;
     }
 
-    .aboutMe {
-      background: #ffffff;
-      border-radius: 10px;
-      padding: 10px;
-      text-align: left;
-    }
-
-    .aboutMe p {
+    .contacts p, .aboutMe p {
       color: #000000;
-    }
-
-    .contacts p { 
-      margin: 6px 0;
-      font-size: 14px;
-      color: #000000;
+      font-size: 0.9rem;
+      line-height: 1.4;
     }
 
     .contacts strong {
@@ -95,8 +88,10 @@
 
     /* Right Content */
     .content {
-      width: 70%;
+      flex: 2;
+      min-width: 300px;
       padding: 20px;
+      box-sizing: border-box;
     }
 
     header {
@@ -104,28 +99,13 @@
       justify-content: space-between;
       align-items: center;
       margin-bottom: 25px;
+      flex-wrap: wrap;
     }
 
     header h1 {
-      font-size: 26px;
+      font-size: 1.6rem;
       color: #000000;
       margin: 0;
-    }
-
-    header .buttons button {
-      background: #4fd1c5;
-      border: none;
-      color: #000;
-      font-weight: bold;
-      padding: 8px 16px;
-      border-radius: 10px;
-      margin-left: 10px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    header .buttons button:hover {
-      background: #38b2ac;
     }
 
     .section {
@@ -137,17 +117,16 @@
 
     .section p {
       color: #000000;
+      font-size: 0.95rem;
+      line-height: 1.6;
     }
 
     .section h2 {
       color: #000000;
-      border-bottom: 2px solid #9D825D  ;
+      border-bottom: 2px solid #9D825D;
       padding-bottom: 5px;
       margin-bottom: 15px;
-    }
-
-    .about p {
-      line-height: 1.6;
+      font-size: 1.2rem;
     }
 
     .achievements, .timeline, .goals {
@@ -156,107 +135,85 @@
       gap: 15px;
     }
 
-    .card {
+    .card, .goal-card {
       background: #e4d5b4;
       border-radius: 12px;
       padding: 15px;
       flex: 1;
       min-width: 200px;
       text-align: center;
+      box-sizing: border-box;
     }
 
-    .card p {
-      color:#000000;
-    }
-
-    .card h3 {
+    .card h3, .goal-card h3 {
       color: #000000;
       margin-bottom: 8px;
+      font-size: 1rem;
+    }
+
+    .card p, .goal-card p {
+      color: #000000;
+      font-size: 0.9rem;
     }
 
     .timeline-item {
       border-left: 3px solid #9D825D;
-      padding-left: 15px; 
+      padding-left: 15px;
       margin-bottom: 10px;
     }
 
     .timeline-item strong {
       color: #000000;
+      font-size: 0.95rem;
     }
 
-    .timeline-item span {
-      font-size: 14px;
-      color: #000000;
-    }
-
-    .goals .goal-card {
-      flex: 1;
-      background: #e4d5b4;
-      padding: 15px;
-      border-radius: 10px;
-      text-align: center;
-      min-width: 200px;
-    }
-
-    .goal-card h3 {
-      color: #000000;
-    }
-
+    /* Responsive Design for Mobile Phones */
     @media (max-width: 768px) {
-  body {
-    align-items: center;
-  }
+      body {
+        align-items: center;
+      }
 
-  .container {
-    flex-direction: column;
-    margin: 10px;
-  }
+      .container {
+        flex-direction: column;
+        margin: 10px;
+      }
 
-  .sidebar, .content {
-    width: 100%;
-    border: none;
-  }
+      .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 2px solid #000000;
+      }
 
-  .sidebar {
-    border-right: none;
-    border-bottom: 2px solid #000000;
-  }
+      .content {
+        width: 100%;
+        padding: 15px;
+      }
 
-  .profile-pic {
-    width: 120px;
-    height: 120px;
-  }
+      .profile-pic {
+        width: 30vw;
+        max-width: 120px;
+      }
 
-  .sidebar h2 {
-    font-size: 18px;
-  }
+      .achievements, .goals {
+        flex-direction: column;
+      }
 
-  .content {
-    padding: 15px;
-  }
+      .card, .goal-card {
+        width: 100%;
+      }
 
-  .achievements, .goals {
-    flex-direction: column;
-  }
+      header h1 {
+        font-size: 1.3rem;
+      }
 
-  .card, .goal-card {
-    min-width: unset;
-    width: 100%;
-  }
+      .section h2 {
+        font-size: 1.1rem;
+      }
 
-  header h1 {
-    font-size: 22px;
-  }
-
-  .section h2 {
-    font-size: 18px;
-  }
-
-  .section p {
-    font-size: 14px;
-  }
-}
-
+      .section p, .contacts p {
+        font-size: 0.85rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -271,14 +228,14 @@
 
       <div class="contacts">
         <h2>Contacts</h2>
-        <p><strong>Email:</strong> jaceyalthea019@gmail.com </p>
-        <p><strong>Phone:</strong> 09777441910 </p>
-        <p><strong>Location:</strong> Barangay Pagaspas, Tanauan City, Batangas </p>
+        <p><strong>Email:</strong> jaceyalthea019@gmail.com</p>
+        <p><strong>Phone:</strong> 09777441910</p>
+        <p><strong>Location:</strong> Barangay Pagaspas, Tanauan City, Batangas</p>
       </div>
 
       <div class="aboutMe">
-        <h2> The Heart Behind The Game </h2>
-        <p>I played as a Game Captain and play as an Opposite Spiker for our the team. “Always be the best at your lowest, because that’s when true strength and character are tested.” I believe that success isn’t just about winning. it’s about staying humble, consistent, and never giving up, even when things get tough. Outside the court, I enjoy watching movies, playing other sports, eating good food, bonding with my family, listening to music, and traveling to new places. These activities keep me relaxed and motivated as I chase my goals both in sports and in life.</p>
+        <h2>The Heart Behind The Game</h2>
+        <p>I played as a Game Captain and play as an Opposite Spiker for our team. “Always be the best at your lowest, because that’s when true strength and character are tested.” I believe that success isn’t just about winning—it’s about staying humble, consistent, and never giving up, even when things get tough. Outside the court, I enjoy watching movies, playing other sports, eating good food, bonding with my family, listening to music, and traveling to new places. These activities keep me relaxed and motivated as I chase my goals both in sports and in life.</p>
       </div>
     </aside>
 
@@ -339,23 +296,18 @@
         <div class="goals">
           <div class="goal-card">
             <h3>To be the first doctor in my family</h3>
-            <p></p>
           </div>
           <div class="goal-card">
             <h3>To become a billionaire through hard work and determination</h3>
-            <p></p>
           </div>
           <div class="goal-card">
             <h3>To build my own companies and make them successful</h3>
-            <p></p>
           </div>
           <div class="goal-card">
             <h3>To enjoy the rewards of my dedication and perseverance</h3>
-            <p></p>
           </div>
           <div class="goal-card">
             <h3>To inspire young athletes to dream big and never give up</h3>
-            <p></p>
           </div>
         </div>
       </section>
