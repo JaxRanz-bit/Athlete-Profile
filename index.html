@@ -202,6 +202,61 @@
       color: #000000;
     }
 
+    @media (max-width: 768px) {
+  body {
+    align-items: center;
+  }
+
+  .container {
+    flex-direction: column;
+    margin: 10px;
+  }
+
+  .sidebar, .content {
+    width: 100%;
+    border: none;
+  }
+
+  .sidebar {
+    border-right: none;
+    border-bottom: 2px solid #000000;
+  }
+
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+  }
+
+  .sidebar h2 {
+    font-size: 18px;
+  }
+
+  .content {
+    padding: 15px;
+  }
+
+  .achievements, .goals {
+    flex-direction: column;
+  }
+
+  .card, .goal-card {
+    min-width: unset;
+    width: 100%;
+  }
+
+  header h1 {
+    font-size: 22px;
+  }
+
+  .section h2 {
+    font-size: 18px;
+  }
+
+  .section p {
+    font-size: 14px;
+  }
+}
+
   </style>
 </head>
 <body>
