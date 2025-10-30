@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Athlete Portfolio</title>
+  <style>
+    body {
+      background-color: #ffffff;
+      color: #ffffff;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      max-width: 1200px;
+      width: 100%;
+      margin: 30px;
+      background-color: #D2B48C;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+
+    /* Left Sidebar */
+    .sidebar {
+      width: 30%;
+      background-color: #9D825D;
+      padding: 30px 20px;
+      text-align: center;
+      border-right: 2px solid #000000;
+    }
+
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 0 auto 20px;
+    }
+
+    .profile-pic img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .sidebar h2 {
+      font-size: 22px;
+      color: #000000;
+      margin-bottom: 5px;
+    }
+
+    .sidebar h3 {
+      font-size: 14px;
+      color: #000000;
+      margin-bottom: 20px;
+    }
+
+    .contacts {
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 15px;
+      text-align: left;
+      margin-bottom: 15px;
+    }
+
+    .aboutMe {
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 10px;
+      text-align: left;
+    }
+
+    .aboutMe p {
+      color: #000000;
+    }
+
+    .contacts p { 
+      margin: 6px 0;
+      font-size: 14px;
+      color: #000000;
+    }
+
+    .contacts strong {
+      color: #000000;
+    }
+
+    /* Right Content */
+    .content {
+      width: 70%;
+      padding: 20px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 25px;
+    }
+
+    header h1 {
+      font-size: 26px;
+      color: #000000;
+      margin: 0;
+    }
+
+    header .buttons button {
+      background: #4fd1c5;
+      border: none;
+      color: #000;
+      font-weight: bold;
+      padding: 8px 16px;
+      border-radius: 10px;
+      margin-left: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    header .buttons button:hover {
+      background: #38b2ac;
+    }
+
+    .section {
+      background: #ffffff;
+      border-radius: 15px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .section p {
+      color: #000000;
+    }
+
+    .section h2 {
+      color: #000000;
+      border-bottom: 2px solid #9D825D  ;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+    }
+
+    .about p {
+      line-height: 1.6;
+    }
+
+    .achievements, .timeline, .goals {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .card {
+      background: #e4d5b4;
+      border-radius: 12px;
+      padding: 15px;
+      flex: 1;
+      min-width: 200px;
+      text-align: center;
+    }
+
+    .card p {
+      color:#000000;
+    }
+
+    .card h3 {
+      color: #000000;
+      margin-bottom: 8px;
+    }
+
+    .timeline-item {
+      border-left: 3px solid #9D825D;
+      padding-left: 15px; 
+      margin-bottom: 10px;
+    }
+
+    .timeline-item strong {
+      color: #000000;
+    }
+
+    .timeline-item span {
+      font-size: 14px;
+      color: #000000;
+    }
+
+    .goals .goal-card {
+      flex: 1;
+      background: #e4d5b4;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      min-width: 200px;
+    }
+
+    .goal-card h3 {
+      color: #000000;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Left Sidebar -->
+    <aside class="sidebar">
+      <div class="profile-pic">
+        <img src="Jacey.jpg" alt="Profile Photo">
+      </div>
+      <h2>Jacey Althea O. Marudo</h2>
+      <h3></h3>
+
+      <div class="contacts">
+        <h2>Contacts</h2>
+        <p><strong>Email:</strong> jaceyalthea019@gmail.com </p>
+        <p><strong>Phone:</strong> 09777441910 </p>
+        <p><strong>Location:</strong> Barangay Pagaspas, Tanauan City, Batangas </p>
+      </div>
+
+      <div class="aboutMe">
+        <h2> The Heart Behind The Game </h2>
+        <p>I played as a Game Captain and play as an Opposite Spiker for our the team. “Always be the best at your lowest, because that’s when true strength and character are tested.” I believe that success isn’t just about winning. it’s about staying humble, consistent, and never giving up, even when things get tough. Outside the court, I enjoy watching movies, playing other sports, eating good food, bonding with my family, listening to music, and traveling to new places. These activities keep me relaxed and motivated as I chase my goals both in sports and in life.</p>
+      </div>
+    </aside>
+
+    <!-- Right Content -->
+    <main class="content">
+      <header>
+        <h1>Athlete Profile</h1>
+      </header>
+
+      <section class="section about">
+        <h2>About Me</h2>
+        <p>I’m Jacey Althea O. Marudo, 17 years old, and I live in Brgy. Pagaspas, Tanauan City, Batangas. I started playing volleyball when I was in Grade 5, and since then, the sport has become one of my greatest passions. Aside from athletics, I’m also focused on academics and always strive to balance both fields. I consider myself a passionate and hardworking student, dedicated to achieving my goals. I’m also family-oriented and believe that my loved ones are my greatest source of strength and inspiration. My journey as an athlete and student continues to shape me into a more disciplined and determined individual.</p>
+      </section>
+
+      <section class="section">
+        <h2>Achievements & Highlights</h2>
+        <div class="achievements">
+          <div class="card">
+            <h3>Grade 7 – 11</h3>
+            <p>With Honors</p>
+          </div>
+          <div class="card">
+            <h3>Inter-Barangay Tournament 2023</h3>
+            <p>Participant</p>
+          </div>
+          <div class="card">
+            <h3>Inter-Barangay Tournament 2024</h3>
+            <p>3rd Place</p>
+          </div>
+          <div class="card">
+            <h3>Bravolution Basketball Tournament</h3>
+            <p>Champion</p>
+          </div>
+          <div class="card">
+            <h3>Safety and First Aid Seminar</h3>
+            <p>Attendee</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Athlete Timeline</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <strong>2020 – 2024 – Champion, Division Meet</strong><br/>
+          </div>
+          <div class="timeline-item">
+            <strong>2020–2024 – Participant, Regional Athletic Association Meet</strong><br/>
+          </div>
+          <div class="timeline-item">
+            <strong>2024 – Participant, United College Championship League</strong><br/>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Goals & Aspirations</h2>
+        <div class="goals">
+          <div class="goal-card">
+            <h3>To be the first doctor in my family</h3>
+            <p></p>
+          </div>
+          <div class="goal-card">
+            <h3>To become a billionaire through hard work and determination</h3>
+            <p></p>
+          </div>
+          <div class="goal-card">
+            <h3>To build my own companies and make them successful</h3>
+            <p></p>
+          </div>
+          <div class="goal-card">
+            <h3>To enjoy the rewards of my dedication and perseverance</h3>
+            <p></p>
+          </div>
+          <div class="goal-card">
+            <h3>To inspire young athletes to dream big and never give up</h3>
+            <p></p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
